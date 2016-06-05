@@ -30,4 +30,16 @@ public class PlayerControls : MonoBehaviour {
 		} 
 		rb.velocity = new Vector2 ((float)rb.velocity.x*0.9f, (float)rb.velocity.y*0.9f);
 	}
+
+	void OnMouseDown() {
+		Vector3 clickedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		transform.position = new Vector2 (clickedPosition.x, clickedPosition.y);
+	}
+
+	void OnMouseDrag() {
+		Debug.Log (Input.mousePosition);
+		Vector3 clickedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		rb.position = new Vector2 (clickedPosition.x, clickedPosition.y);
+		rb.velocity = new Vector2(Input.GetAxis("Mouse X")*3f,Input.GetAxis("Mouse Y")*3f);
+	}
 }
