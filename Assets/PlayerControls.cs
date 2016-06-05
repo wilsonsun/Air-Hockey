@@ -37,7 +37,6 @@ public class PlayerControls : MonoBehaviour {
 	}
 
 	void OnMouseDrag() {
-		Debug.Log (Input.mousePosition);
 		Vector3 clickedPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		rb.position = new Vector2 (clickedPosition.x, clickedPosition.y);
 		rb.velocity = new Vector2(Input.GetAxis("Mouse X")*3f,Input.GetAxis("Mouse Y")*3f);
