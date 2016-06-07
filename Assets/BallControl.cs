@@ -21,6 +21,7 @@ public class BallControl : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.transform.tag == "Player") {
 			//rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 2 + coll.rigidbody.velocity.y / 3);
+			audio.pitch = Random.Range(0.8f, 1.2f);
 			audio.Play ();
 		}
 	}

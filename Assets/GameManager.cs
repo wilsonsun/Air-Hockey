@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
 	void OnGUI () {
 		GUI.skin = skin;
 		GUI.color = Color.red;
-		GUI.Label (new Rect (Screen.width / 2 - 150, 20, 100, 100), "" + playerScore01);
-		GUI.Label (new Rect (Screen.width / 2 + 150, 20, 100, 100), "" + playerSocer02);
+		GUI.Label (new Rect (Screen.width / 2 - 150, 80, 400, 400), "" + playerScore01);
+		GUI.Label (new Rect (Screen.width / 2 + 150, 80, 400, 400), "" + playerSocer02);
 	}
 }
